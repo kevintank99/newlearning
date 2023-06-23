@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "3a302013-551a-4c7e-b66d-ec3515c29482",
+		"name": "LTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth - username & password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\" : \"www.pragsparking.com​\",\n  \"password\" : \"x6gist1s0Apiclth\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/auth/login",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - Pos id",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"pos\" : {\n    \"id\":\"310085DBFB5741C3BFC342521D36A60C\"\n}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/auth/login",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/auth/refresh",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"pos\": {\n    \"id\": \"310085DBFB5741C3BFC342521D36A60C\"\n  },\n  \"cart\": {\n    \"operator\": \"John Doh\",\n    \"languageCode\": \"de\",\n    \"url\": {\n      \"success\": \"https://www.myurl.domain/success\",\n      \"error\": \"https://www.myurl.domain/error\",\n      \"aborted\": \"https://www.myurl.domain/abort\"\n    },\n    \"note\": \"Lorem ipsum ...\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/shop/cart/create",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"shop",
+						"cart",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"pos\": {\n    \"id\": \"310085DBFB5741C3BFC342521D36A60C\"\n  },\n  \"cart\": {\n    \"rid\": \"300C8DD1848C4D84B12C8E03ED431762\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/shop/cart/get",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"shop",
+						"cart",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"pos\": {\n    \"id\": \"310085DBFB5741C3BFC342521D36A60C\"\n  },\n  \"cart\": {\n    \"rid\": \"300C8DD1848C4D84B12C8E03ED431762\",\n    \"cartProduct\": {\n      \"product\": {\n        \"rid\": \"4B12C8E03300C8DD1848C4D8ED431762\",\n        \"type\": 0,\n        \"backLink\": \"https//www.myshop.it/products/001\"\n      },\n      \"cartVariant\": {\n        \"variant\": {\n          \"rid\": \"12C8E0334B00C8DD1848C4D8ED431762\",\n          \"backLink\": \"https//www.myshop.it/products/001/variant/001\"\n        },\n        \"dateRid\": \"stringstringstringstringstringst\"\n      },\n      \"quantity\": {\n        \"value\": 2\n      },\n      \"combinedSaleParents\": [\n        \"string\"\n      ]\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://lcs.dev-lts.it/webapi/shop/cart/product/add",
+					"protocol": "https",
+					"host": [
+						"lcs",
+						"dev-lts",
+						"it"
+					],
+					"path": [
+						"webapi",
+						"shop",
+						"cart",
+						"product",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1017 @@
+{
+	"info": {
+		"_postman_id": "4454a293-b6e6-4a11-83b9-048cbf249f48",
+		"name": "Parking-Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Get All Inventory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"_id\": \"643f8608920584f22f9e4caf\",\n            \"vehicleType\": \"CAR\",\n            \"numberOfVehicle\": 100,\n            \"startDate\": \"2023-03-31T18:30:00.000Z\",\n            \"endDate\": \"2040-03-31T18:30:00.000Z\",\n            \"createdAt\": \"2023-04-19T06:08:04.077Z\",\n            \"lastUpdatedAt\": \"2023-04-19T06:08:04.077Z\",\n            \"updatedAt\": \"2023-05-19T12:39:19.780Z\",\n            \"parkId\": \"HotelLagoDiBraies\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/inventory/getall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"inventory",
+								"getall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory Slots",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\" : \"05/17/2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/inventory/getinventoryslots?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-01-2023&endDate=04-30-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"inventory",
+								"getinventoryslots"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-01-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04-30-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Today's Inventory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\" : \"05/17/2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/1/u0785/inventory/gettodaysinventory?date=05-27-2023",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"inventory",
+								"gettodaysinventory"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR",
+									"disabled": true
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies",
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "05-27-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Inventory Counts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"date\" : \"05/17/2023\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/inventory/getinventorycounts?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-01-2023&endDate=04-30-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"inventory",
+								"getinventorycounts"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-01-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04-30-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Inventory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\n            \"vehicleType\": \"CAR\",\n            \"numberOfVehicle\": -10,\n            \"startDate\": \"2023-04-19T00:00:00.000Z\",\n            \"endDate\": \"2023-04-19T23:59:59.000Z\",\n            \"createdAt\": \"2023-04-28T05:29:54.492Z\",\n            \"lastUpdatedAt\": \"2023-04-28T05:29:54.492Z\",\n            \"updatedAt\": \"2023-05-19T12:39:19.780Z\",\n            \"parkId\": \"HotelLagoDiBraies\"\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/inventory/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"inventory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rates",
+			"item": [
+				{
+					"name": "Get Rates",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer token",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Today's Rate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/gettodaysrate?startDate=04/01/2023&endDate=04/01/2023&parkId=HotelLagoDiBraies&vehicleType=MOTORBIKE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"gettodaysrate"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "04/01/2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04/01/2023"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "vehicleType",
+									"value": "MOTORBIKE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Rate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"ticketType\": \"daily\",\n    \"vehicleType\": \"CAR\" ,\n    \"parkId\":\"test\",\n    \"prices\":[\n        {\n            \"startDate\" : \"04/01/2023\",\n            \"endDate\" : \"04/29/2023\",\n            \"amount\":30,\n            \"serviceAmount\": 10\n        },\n        {\n            \"startDate\" : \"04/30/2023\",\n            \"endDate\" : \"04/30/2023\",\n            \"amount\":40,\n            \"serviceAmount\": 10\n        },\n         {\n            \"startDate\" : \"05/15/2023\",\n            \"endDate\" : \"06/30/2023\",\n            \"amount\":30,\n            \"serviceAmount\": 10\n        },\n        {\n            \"startDate\" : \"07/01/2023\",\n            \"endDate\" : \"09/01/2023\",\n            \"amount\":60,\n            \"serviceAmount\":10\n        }\n\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Gap Rate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticketType\": \"daily\",\n    \"vehicleType\": \"CAR\" ,\n    \"amount\": 30,\n    \"serviceAmount\":10,\n    \"startDate\" : \"05/02/2023\",\n    \"endDate\" : \"05/10/2023\",\n    \"parkId\": \"HotelLagoDiBraies\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/addgaprate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"addgaprate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Rate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ticketType\": \"daily\",\n    \"vehicleType\": \"CAR\" ,\n    \"amount\": 35,\n    \"startDate\" : \"05/16/2023\",\n    \"endDate\" : \"06/29/2023\",\n    \"id\": \"00636244\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/updateslotrate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"updateslotrate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slot Rate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"ticketType\": \"daily\",\n    \"vehicleType\": \"CAR\" ,\n    \"id\":\"00452379\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/u0785/rates/removeslotrate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"u0785",
+								"rates",
+								"removeslotrate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "Get reservations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Todays Reservation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/gettoday?parkId=HotelLagoDiBraies&startDate=04-24-2023&endDate=04-28-2028",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"gettoday"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR",
+									"disabled": true
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-24-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04-28-2028"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation counts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/getreservationcounts?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-25-2023&endDate=04-25-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"getreservationcounts"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-25-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04-25-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Checkout counts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/getcheckoutcounts?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-01-2023&endDate=04-30-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"getcheckoutcounts"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-01-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "04-30-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://10.10.10.119:3002/api/1/reservation/getreservation?email=mtsonlinetest@gmail.com&reservationId=403505140&language=en",
+							"protocol": "http",
+							"host": [
+								"10",
+								"10",
+								"10",
+								"119"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"getreservation"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "mtsonlinetest@gmail.com"
+								},
+								{
+									"key": "reservationId",
+									"value": "403505140"
+								},
+								{
+									"key": "language",
+									"value": "en"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Parking Slot Available",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://10.10.10.119:3002/api/1/reservation/checkslotavailability?vehicleType=CAR&parkId=HotelLagoDiBraies&arrival=05-27-2023",
+							"protocol": "http",
+							"host": [
+								"10",
+								"10",
+								"10",
+								"119"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"checkslotavailability"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "arrival",
+									"value": "05-27-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Range Availability",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/getavailability?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-01-2023&endDate=05-30-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"getavailability"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-01-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "05-30-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Calendar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/getcalendar?vehicleType=CAR&parkId=HotelLagoDiBraies&startDate=04-01-2023&endDate=05-30-2023",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"getcalendar"
+							],
+							"query": [
+								{
+									"key": "vehicleType",
+									"value": "CAR"
+								},
+								{
+									"key": "parkId",
+									"value": "HotelLagoDiBraies"
+								},
+								{
+									"key": "startDate",
+									"value": "04-01-2023"
+								},
+								{
+									"key": "endDate",
+									"value": "05-30-2023"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tickets\": [\n        {\n            \"vehicleType\":\"CAR\",\n            \"ticketType\":\"daily\",\n            \"price\":20,\n            \"servicePrice\" : 20,\n            \"arrival\": \"05/30/2023\",\n            \"departure\": \"05/30/2023\",\n            \"plate\": \"GJ03LG0000\",\n            \"parkId\":\"HotelLagoDiBraies\"\n        },\n        {\n            \"vehicleType\":\"MOTORBIKE\",\n            \"ticketType\":\"daily\",\n            \"price\":20,\n            \"servicePrice\" : 20,\n            \"arrival\": \"05/30/2023\",\n            \"departure\": \"05/30/2023\",\n            \"plate\": \"GJ03LG0000\",\n            \"parkId\":\"HotelLagoDiBraies\"\n        }\n    ],\n    \"customer\":{\n        \"name\":\"Test\",\n        \"surname\":\"Test\",\n        \"email\": \"mtsonlinetest@gmail.com\",\n        \"phone\": \"9989989989\"\n    },\n    \"paymentMode\" : \"test\",\n    \"paymentStatus\" : \"success\",\n    \"transactions\":[],\n    \"totalAmount\": 100\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://10.10.10.119:3002/api/1/reservation/add",
+							"protocol": "http",
+							"host": [
+								"10",
+								"10",
+								"10",
+								"119"
+							],
+							"port": "3002",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Reservation Status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"checkoutId\" : \"36B494E9A59D34958CB6DCADB736FA84.uat01-vm-tx02\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/checkstatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"checkstatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  Reservation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"reservationId\": 98989995522,\n   \"amount\":15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/1/reservation/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"reservation",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mailer",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://parking-test.mts-online.com/api/1/mailer/reservation/57FA3E0D8E1DC40753682DEDF9539520.uat01-vm-tx03",
+							"protocol": "https",
+							"host": [
+								"parking-test",
+								"mts-online",
+								"com"
+							],
+							"path": [
+								"api",
+								"1",
+								"mailer",
+								"reservation",
+								"57FA3E0D8E1DC40753682DEDF9539520.uat01-vm-tx03"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/1/mailer/reservation/57FA3E0D8E1DC40753682DEDF9539520.uat01-vm-tx03",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"mailer",
+								"reservation",
+								"57FA3E0D8E1DC40753682DEDF9539520.uat01-vm-tx03"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LTS",
+			"item": [
+				{
+					"name": "Sync LTS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/1/lts/sync",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"1",
+								"lts",
+								"sync"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

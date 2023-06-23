@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "cf32ce02-dc64-49fa-b0bc-120951f9b9ec",
+		"name": "BFT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreateReservation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival\": \"2023-05-17T16:13:19.063Z\",\n  \"departure\": \"2023-05-20T16:13:19.063Z\",\n  \"amount\": 15,\n  \"servicesAmount\": 5,\n  \"plate\": \"GB211GY\",\n  \"name\": \"Bft\",\n  \"surname\": \"SPA\",\n  \"email\": \"bft.tech.parking@bft-automation.com\",\n  \"rentalCar\": false,\n  \"phone\": 0,\n  \"vehicle\": \"AUTO\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RetrieveReservation",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/168473854390/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						"168473854390",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRes",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival\": \"2023-04-19T16:13:19.063Z\",\n  \"departure\": \"2023-04-19T16:13:19.063Z\",\n  \"amount\": 30,\n  \"servicesAmount\": 10,\n  \"plate\": \"AAAAA\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/168473854390",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						"168473854390"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRes",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/168473854390",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						"168473854390"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

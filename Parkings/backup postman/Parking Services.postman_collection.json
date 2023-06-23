@@ -1,0 +1,87 @@
+{
+	"info": {
+		"_postman_id": "bfa43b94-0206-44bf-a78f-442ce7a25e87",
+		"name": "Parking Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://u.mts-online.com/api/parking/2.0/services",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer d3d3LmxhZ29kaWJyYWllcy5jb206MGVkNmVkODdlMGM1NDdjMjQ2NTRlZDU2M2I0OGI1YzJhNTdkNDU3M2I0YmQxMmFmNmQ=",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://u.mts-online.com/api/parking/2.0/services",
+					"protocol": "https",
+					"host": [
+						"u",
+						"mts-online",
+						"com"
+					],
+					"path": [
+						"api",
+						"parking",
+						"2.0",
+						"services"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "04/04/2023",
+							"disabled": true
+						},
+						{
+							"key": "endDate",
+							"value": "05/31/2023",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://u.mts-online.com/api/parking/2.0/services Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer d3d3LmxhZ29kaWJyYWllcy5jb206MGVkNmVkODdlMGM1NDdjMjQ2NTRlZDU2M2I0OGI1YzJhNTdkNDU3M2I0YmQxMmFmNmQ=",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://10.10.10.119:3001/api/parking/2.0/services?startDate=04/04/2023",
+					"protocol": "http",
+					"host": [
+						"10",
+						"10",
+						"10",
+						"119"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"parking",
+						"2.0",
+						"services"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "04/04/2023"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

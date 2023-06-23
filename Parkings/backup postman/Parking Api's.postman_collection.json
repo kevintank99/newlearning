@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "dd5e96ce-dd87-49ee-9698-d947a31ae98e",
+		"name": "Parking Api's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"arrival\": \"2023-05-25T07:31:03.767Z\",\n  \"departure\": \"2023-05-25T07:31:03.767Z\",\n  \"amount\": 10,\n  \"servicesAmount\": 10,\n  \"plate\": \"any\",\n  \"name\": \"Test\",\n  \"surname\": \"MTS\",\n  \"email\": \"text@example.com\",\n  \"rentalCar\": false,\n  \"phone\": 1111111111,\n  \"vehicle\": \"MOTORBIKE\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-gravitee-api-key",
+						"value": "01274dcd-d97b-4113-804e-4c4420296ed2",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.bft-park.com:8082/reservations/HotelLagoDiBraies/168481845060",
+					"protocol": "https",
+					"host": [
+						"api",
+						"bft-park",
+						"com"
+					],
+					"port": "8082",
+					"path": [
+						"reservations",
+						"HotelLagoDiBraies",
+						"168481845060"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
